@@ -63,8 +63,8 @@ or modify pathname as needed and eval this expression:
 ;;; execute code on main thread -- necessary for interacting with UI elements
 (defmacro on-main-thread (&rest actions)
   `(ccl::call-in-event-process
-     #'(lambda ()
-         ,@actions)))
+    (lambda ()
+      ,@actions)))
 
 ;;;; shape =====================================================================
 
@@ -257,7 +257,7 @@ p
 
 #|
 >>> operating on lists -- mapcar
-(print (mapcar #'(lambda (x) (* x 2))
+(print (mapcar (lambda (x) (* x 2))
                '(1 2 3 4 5)))
 
 (print (mapcar #'oddp '(1 2 3 4 5)))
@@ -266,7 +266,7 @@ p
 ;;; randomize shape points
 (defmethod randomize-points ((self polygon-shape) (delta point))
   (setf (points self)
-	(mapcar #'(lambda (p)
+	(mapcar (lambda (p)
 		    (let ((offset (p! (rand1 (x delta)) (rand1 (y delta)))))
 		      (p+ p offset)))
 		(points self))))
