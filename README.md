@@ -4,5 +4,7 @@ Common Lisp tutorials with 2D OpenGL graphics.
 
 Lesson 00 -- setup
 
-Lesson 01 Points & Shapes
+Lesson 01 -- Points & Shapes
+
+Lesson 02 -- Generating Shapes
 
