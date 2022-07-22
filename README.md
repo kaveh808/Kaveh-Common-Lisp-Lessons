@@ -10,3 +10,7 @@ Lesson 01 -- Points & Shapes
 
 Lesson 02 -- Generating Shapes
 
+Lesson 03 -- Transforms
+
+Lesson 04 -- Transforming Shapes
+
